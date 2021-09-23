@@ -1,0 +1,38 @@
+@import "main";
+
+.listaDatos {
+  text-align: left;
+  display: flex;
+}
+.listaDatos__cuadro {
+  display: flex;
+  flex-direction: row;
+  li {
+    margin: 5px;
+  }
+  .listaDatos__variables {
+    width: 50%;
+    flex-wrap: wrap;
+    ul {
+      padding: 0;
+      list-style: none;
+    }
+    ul li:before {
+      /* the custom styled bullets */
+      background-color: $primario;
+      border-radius: 50%;
+      content: "";
+      display: inline-block;
+      margin-right: 20px;
+      margin-bottom: 2px;
+      height: 0.6em;
+      width: 0.6em;
+    }
+  }
+}
+.listaDatos__resultados {
+  font-weight: $fuente-light;
+  ul {
+    list-style: none;
+  }
+}

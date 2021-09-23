@@ -1,0 +1,110 @@
+@import "main";
+
+.containerLogin{
+    background-color:$fondo;
+    background-image: url("../media/gatonegromano.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 20vh 10vw;
+    text-shadow: 2px 0 0 $fondo, -2px 0 0 $fondo, 0 2px 0 $fondo, 0 -2px 0 $fondo, 1px 1px $fondo, -1px -1px 0 $fondo, 1px -1px 0 $fondo, -1px 1px 0 $fondo;
+}
+
+.cuadroLogin{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    font-family: $fuente;
+    background-color:rgba(255, 255, 255, 0.5);
+    justify-content: space-between;
+    box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.1);
+
+    .form-group{
+        margin-bottom: 2rem;
+    }
+
+    h3{
+        align-self: center;
+        font-style: italic;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 300;
+        color: #bf3d4a;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    label{
+        font-weight: 300;
+        font-size: 1.2em;
+    }
+
+    input.form-control{
+        display: inline;
+    }
+    .form-group--btn{
+        display: flex;
+        flex-direction: column;
+        .btn{
+            margin: 1em auto;
+            width: 100%;
+        }
+    }
+    
+}
+@media all and (min-width: 540px) {
+    .cuadroLogin{
+        padding: 2.5em;
+        margin: auto;
+        max-width: 800px;
+        h3{
+            font-weight: 400;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        label{
+            font-weight: 300;
+            font-size: 1.2em;
+        }
+        .form-group--btn{
+            display: flex;
+            flex-direction: row;
+            .btn{
+                margin: 1em auto;
+                width: 40%;
+            }
+        }
+    }
+}
+
+@media all and (min-width: 992px) {
+    .containerLogin{
+        background-color:$fondo;
+        background-image: url("../media/manopata.jpg");
+        background-size: cover;
+        background-position: center;
+        padding: 15%
+    }
+    .cuadroLogin{
+        padding: 2.5em;
+        margin: auto;
+        max-width: 800px;
+        h3{
+            font-weight: 500;
+            font-size: 2.3rem;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+        }
+        label{
+            font-weight: 400;
+            font-size: 1.4em;
+        }
+        .form-group--btn{
+            display: flex;
+            flex-direction: row;
+            .btn{
+                margin: 1em auto;
+                width: 40%;
+            }
+        }
+    }
+}

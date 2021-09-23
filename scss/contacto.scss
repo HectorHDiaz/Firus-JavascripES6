@@ -1,0 +1,12 @@
+@import "main";
+.containerCuadros {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+@media all and (min-width: 992px) {
+  .containerCuadros {
+    flex-direction: row;
+  }
+}

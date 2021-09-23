@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSS Link & Absolute Bootstrap Link-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../css/adoptar.css"/>
+    <!--SEO Metas-->
+    <meta name="description" content="Desde esta página podrás realizar el contacto y la adopción de la mascota que hayas elegido en la busqueda!">
+    <meta name="keywords"  content="MASCOTAS, ADOPTAR, PERROS, GATOS, MAPA, AYUDAR, ANIMALES, CALLE, PERDIDOS">
+    <title>Adoptar</title>
+</head>
+<body>
+    <div class="container-fluid px-0">
+        <!--Header-->
+        <nav class="navbar navbar-expand-lg navbar-dark header">
+          <a class="navbar-brand" href="inicio.html">
+              <img src="../media/Firus.png" alt="firus">
+          </a>
+          <div class="navbar-user">
+            <a class="navbar-userImage" href="perfil.html">
+              <img src="../media/user/userPicture.jpg" alt="user profile">
+            </a>
+            <a href="perfil.html" id="userName">Hector Diaz</a>
+          </div>
+                <button class="navbar-toggler mr-4" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link" href="inicio.html">Inicio</a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="buscar.html">Buscar<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="informar.html">Informar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                  </ul>
+                </div>
+        </nav>
+        <!--Contenido Principal-->
+        <div class="container">
+          <!--Titulo-->
+          <div class="container__title">
+            <h1>Adopción</h1>
+            </div>
+            <!--Cuadro Principal-->
+            <div class="cuadroPrincipal">
+              <div class="card text-center">
+                <img src="../media/adopciones/perro2.jpg" class="card-img-top" alt="...">
+                <div class="card-header text-muted">
+                  18/03/2019
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title">Cachorro</h3>
+                  <p class="card-text">Es un cachorro muy amigable, confiable y animado. Le gusta comer y dormir con alguien.</p>
+                </div>
+                  <ul class="listaDatos list-group list-group-flush">
+                    <li class="listaDatos__cuadro list-group-item">
+                      <div class="listaDatos__variables">
+                        <ul>
+                          <li>Especie:</li>
+                          <li>Fecha Nacimiento:</li>
+                          <li>Sexo:</li>
+                          <li>Tamaño:</li>
+                          <li>Peso:</li>
+                        </ul>
+                      </div>
+                      <div class="listaDatos__resultados">
+                        <ul>
+                          <li>Perro</li>
+                          <li>03/2018</li>
+                          <li>Macho</li>
+                          <li>Mediano</li>
+                          <li>10Kg</li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="listaDatos__cuadro list-group-item">
+                      <div class="listaDatos__variables">
+                        <ul>
+                          <li>Vacunado:</li>
+                          <li>Desparasitado:</li>
+                          <li>Esterelizado:</li>
+                          <li>Identificado:</li>
+                          <li>Microchip:</li>
+                        </ul>
+                      </div>
+                      <div class="listaDatos__resultados">
+                        <ul>
+                          <li>No</li>
+                          <li>No</li>
+                          <li>No</li>
+                          <li>No</li>
+                          <li>No</li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                <div class="card-body">
+                  <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal">
+                    Adoptar
+                  </button>
+                  <!-- Modal -->
+                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Solicitud de Adopción recibida!</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          Estaremos en contacto en breve. Muchas gracias!
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn" data-dismiss="modal">Aceptar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer text-muted">
+                  Firus ONG
+                </div>
+              </div>
+            </div>
+      </div>
+      <!--Publicidad para Redes Sociales-->
+      <div class="container text-center">
+        <h4>Visita nuestras Redes para saber las ultimas noticias!</h4>
+          <hr class="my-4">
+          <div class="container__iconos">
+            <a href="https://www.instagram.com/"><img src="../media/icons/instagram.png" alt="Instagram"></a>
+            <a href="https://www.twitter.com/"><img src="../media/icons/twitter.png" alt="Twitter"></a>
+            <a href="https://www.facebook.com/"><img src="../media/icons/facebook.png" alt="Facebook"></a>
+            <a href="https://www.youtube.com/"><img src="../media/icons/youtube.png" alt="Youtube"></a>
+          </div>
+        </div>
+    <!--Footer-->
+      <nav class="navbar navbar-expand-lg navbar-dark footer justify-content-between">
+        <div class="justify-content-start footer__iconos" id="navbarNav">
+          <a href="https://www.instagram.com/"><img src="../media/icons/instagram.png" alt="Instagram"></a>
+          <a href="https://www.twitter.com/"><img src="../media/icons/twitter.png" alt="Twitter"></a>
+          <a href="https://www.facebook.com/"><img src="../media/icons/facebook.png" alt="Facebook"></a>
+          <a href="https://www.youtube.com/"><img src="../media/icons/youtube.png" alt="Youtube"></a>
+        </div>
+          
+          <div class="title">
+          <p>Firus ONG</p>
+          </div>
+
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="inicio.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="buscar.html">Buscar<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="informar.html">Informar</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="contacto.html">Contacto</a>
+              </li>
+            </ul>
+        </nav>
+     </div>
+    <!--Absolute Bootstrap Querys-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+</body>
+</html>

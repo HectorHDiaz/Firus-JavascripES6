@@ -1,0 +1,101 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: $texto-secundario;
+  color: $texto;
+  font-family: $fuente;
+}
+
+.container {
+  color: $texto;
+  font-family: $fuente;
+  padding: 20px;
+}
+.container__title {
+  display: flex;
+  justify-content: center;
+  font-family: $fuente;
+  color: $primario;
+  font-style: italic;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  h1 {
+    font-size: 1.5rem;
+    font-weight: $fuente-regular;
+  }
+}
+
+.cuadroPrincipal p,
+ul {
+  font-size: 10px;
+}
+.cuadrosInfo {
+  margin: 2rem 0;
+}
+.carousel img {
+  border-radius: 0.2rem;
+}
+
+.container__titulosPrincipales {
+  font-family: $fuente;
+  font-weight: $fuente-regular;
+  color: $primario;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.container__iconos{
+  padding-bottom: 1rem;
+}
+
+.container__iconos a,
+.footer__iconos a {
+  margin:0.7rem;
+
+  img{
+    width:3rem;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .cuadroPrincipal p,
+  ul {
+    font-size: 14px;
+  }
+  .container__title {
+    h1 {
+      font-size: 2rem;
+    }
+  }
+  .container__titulosPrincipales {
+    font-family: $fuente;
+    font-weight: $fuente-regular;
+    color: $primario;
+    font-size: 1.5rem;
+  }
+
+  .container__iconos a{
+    margin: 1rem;
+
+    img{
+      width: 4rem;
+    }
+  }
+
+}
+
+@media all and (min-width: 992px) {
+  .container__title {
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
+  .container__iconos {
+    display: none;
+  }
+  .cuadroPrincipal p,
+  ul {
+    font-size: 18px;
+  }
+}

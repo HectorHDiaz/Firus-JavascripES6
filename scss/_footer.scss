@@ -1,0 +1,41 @@
+/*Footer*/
+.footer {
+  display: flex;
+  flex-direction: row-reverse;
+  background-color: $primario;
+  color: $fondo;
+  width: 100%;
+  padding: 1em 3em;
+  .footer__title {
+    color: $fondo;
+    &:hover {
+      transition: 0.5s;
+      transform: scale(1.5);
+      color: white;
+    }
+  }
+  .footer__iconos {
+    display: none;
+    a:hover {
+      transition: 0.5s;
+      transform: scale(1.15);
+    }
+  }
+  ul {
+    display: none;
+  }
+}
+
+@media all and (min-width: 992px) {
+  .footer {
+    .footer__iconos {
+      display: flex;
+    }
+    img {
+      width: 50px;
+    }
+    ul {
+      display: flex;
+    }
+  }
+}

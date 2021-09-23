@@ -1,0 +1,113 @@
+@import "main";
+
+/*Color Palette;
+  red:    #bf3d4a
+  white:  #fafafa
+  dark:   #223843
+  grey:   #565652
+  lila:   #EEE8F0
+*/
+
+a {
+  text-decoration: none;
+  color: inherit;
+  &:hover {
+    text-decoration: none;
+    color: $primario;
+  }
+}
+
+/*Carousel*/
+.carousel-caption {
+  padding-bottom: 0;
+  h2 {
+    font-weight: bold;
+  }
+  h5 {
+    font-size: 0.9rem;
+  }
+  p {
+    font-size: 0.7rem;
+  }
+}
+.carousel-indicators{
+  margin-bottom: 0;
+}
+/*Accordion*/
+.card-body {
+  padding: 1.5rem;
+}
+/*Info*/
+.card:hover {
+  transition: 0.3s;
+  transform: scale(1.05);
+}
+
+#desktopInfo {
+  display: none;
+}
+
+.jumbotron {
+  border-radius: 0.2rem;
+  h3 {
+    font-size: 1rem;
+  }
+  p {
+    font-size: 0.7rem;
+  }
+}
+
+/*Mas Info Section*/
+.masInfoSection {
+  color: $texto-secundario;
+}
+@for $i from 1 through 3 {
+  .jumbotron#{$i} {
+    background-image: url("../media/info#{$i}.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+@media all and (min-width: 992px) {
+  .jumbotron {
+    h3 {
+      font-size: 2rem;
+    }
+    p {
+      font-size: 1.2rem;
+    }
+  }
+  /*Cards*/
+  #desktopInfo {
+    display: flex;
+  }
+
+  .card-title {
+    color: #bf3d4a;
+    padding: 0.5rem;
+  }
+  .card-text {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+
+  .carousel-indicators{
+    margin-bottom: 10px;
+  }
+
+  .carousel-caption {
+    padding-bottom: 20px;
+
+    h2 {
+      font-size: 3rem;
+    }
+    h5 {
+      font-size: 1.5rem;
+    }
+    p {
+      font-size: 1rem;
+    }
+  }
+}

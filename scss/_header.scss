@@ -1,0 +1,32 @@
+.header {
+  font-family: $fuente;
+  background-color: $primario;
+  .navbar-user{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .navbar-userImage{
+      width: 50px;
+      height:50px;
+      border-radius: 9999px;
+      border-width: 1px;
+      overflow: hidden;
+      img{
+        width: 100%;
+      }
+    }
+    a#userName{
+      text-decoration: none;
+      color: $fondo;
+      margin: 0;
+      padding: 0 1em;
+    }
+  }
+  .navbar-brand img {
+    width: 120px;
+    &:hover {
+      transition: 1s;
+      transform: rotate(1turn);
+    }
+  }
+}
