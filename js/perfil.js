@@ -3,7 +3,7 @@ $(document).ready(obtenerMascotas);
 
 function obtenerMascotas(){
 let ubicacion = document.getElementById("mascotas"); 
-fetch("../js/class/mascotasGuardadas.json")
+fetch("https://my-json-server.typicode.com/HectorHDiaz/JSON-Firus/mascotas")
 .then(res=>res.json())
 .then(data=>{ 
     let datos = []; 

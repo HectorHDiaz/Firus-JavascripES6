@@ -1,18 +1,32 @@
-let nombreUsuario = document.getElementById("nombreUsuario").value;
-let idUsuario = document.getElementById("idUsuario").value;
+
 let formIngresar = document.getElementById("sumarForm");
+let usuarios = [];
 
+$(document).ready(obtenerUsuarios);
 
-//nombreUsuario.addEventListener('input', validacionNombre(nombreUsuario));
-//idUsuario.addEventListener('input', validaciónId(id));
+formIngresar.addEventListener('submit', ingresoUsuario);
 
-formIngresar.addEventListener('submit', ingresoUsuario(idUsuario, nombreUsuario));
+ function ingresoUsuario(e){
+    e.preventDefault();
+    let usuarioIngreso={};
+    usuarios.forEach(usuario =>{
+        if(usuario.user == document.getElementById("nombreUsuario").value){
+            usuarioIngreso = usuario;
+            console.log("Usuario Conseguido")
+        }
+    });
+    if(usuarioIngreso.pass == document.getElementById("passUsuario").value){
+        sessionStorage.setItem('usuarioActual', JSON.stringify(usuarioIngreso));
+        location.href="/pages/inicio.html";
+    }else{
+        alert("Ingrese Usuario y Contraseña correcta!");
+    }
+}
 
-
-
-function ingresoUsuario(nombre, id){
-
-    const nuevoUsuario = new usuarioFirus(id, nombre);
-    localStorage.setItem("usuarioActual", JSON.stringify(nuevoUsuario));
-
+function obtenerUsuarios(){
+    fetch("https://my-json-server.typicode.com/HectorHDiaz/JSON-Firus/usuarios")
+    .then(res=>res.json())
+    .then(data=>{  
+        usuarios = data;
+    });
 }
