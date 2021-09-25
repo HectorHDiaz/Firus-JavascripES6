@@ -1,4 +1,6 @@
-const usuarioActual
+let usuarioActual;
+$(document).ready(obtenerUsuario());
+domUsuario(usuarioActual);
 
 document.addEventListener('load', () => {
 
