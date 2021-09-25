@@ -29,7 +29,7 @@
   width: 100%;
 }
 
-.header .navbar-user a#userName {
+.header .navbar-user p.nombreUsuario {
   text-decoration: none;
   color: #fafafa;
   margin: 0;

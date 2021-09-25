@@ -6,6 +6,8 @@ $(document).ready(obtenerUsuarios);
 
 formIngresar.addEventListener('submit', ingresoUsuario);
 
+
+
  function ingresoUsuario(e){
     e.preventDefault();
     let usuarioIngreso={};

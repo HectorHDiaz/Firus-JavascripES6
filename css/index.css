@@ -29,7 +29,7 @@
   width: 100%;
 }
 
-.header .navbar-user a#userName {
+.header .navbar-user p.nombreUsuario {
   text-decoration: none;
   color: #fafafa;
   margin: 0;
@@ -361,7 +361,7 @@ ul {
   background-image: url("../media/gatonegromano.jpg");
   background-size: cover;
   background-position: center;
-  padding: 20vh 10vw;
+  padding: 10vh 10vw;
   text-shadow: 2px 0 0 #fafafa, -2px 0 0 #fafafa, 0 2px 0 #fafafa, 0 -2px 0 #fafafa, 1px 1px #fafafa, -1px -1px 0 #fafafa, 1px -1px 0 #fafafa, -1px 1px 0 #fafafa;
 }
 
@@ -460,7 +460,7 @@ ul {
     background-image: url("../media/manopata.jpg");
     background-size: cover;
     background-position: center;
-    padding: 15%;
+    padding: 17vh 10vw;
   }
   .cuadroLogin {
     padding: 2.5em;

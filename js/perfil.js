@@ -1,21 +1,9 @@
 //Carga de MisMascotas
-$(document).ready(obtenerMascotas);
+let usuarioActual;
+$(document).ready(obtenerUsuario());
+obtenerMascotas(usuarioActual);
+domUsuario(usuarioActual);
 
-function obtenerMascotas(){
-let ubicacion = document.getElementById("mascotas"); 
-fetch("https://my-json-server.typicode.com/HectorHDiaz/JSON-Firus/mascotas")
-.then(res=>res.json())
-.then(data=>{ 
-    let datos = []; 
-    data.forEach(mascotas => {
-        if(mascotas.owner == 'Hector Diaz'){
-            datos.push(mascotas);
-        }
-    })
-
-    crearCartas(datos, ubicacion);
-});
-}
 
 //Menu de Actividades
 $('.actividad').click(function(e){
