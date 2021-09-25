@@ -19,7 +19,7 @@ formIngresar.addEventListener('submit', ingresoUsuario);
     });
     if(usuarioIngreso.pass == document.getElementById("passUsuario").value){
         sessionStorage.setItem('usuarioActual', JSON.stringify(usuarioIngreso));
-        location.href="/pages/inicio.html";
+        location.href="pages/inicio.html";
     }else{
         alert("Ingrese Usuario y Contraseña correcta!");
     }
