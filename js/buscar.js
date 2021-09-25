@@ -1,5 +1,5 @@
 //Traer resultados del JSON y mostrar.
-let usuarioActual;
+
 $(document).ready(obtenerUsuario());
 domUsuario(usuarioActual);
 

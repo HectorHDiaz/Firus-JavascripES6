@@ -1,5 +1,5 @@
 //Carga de MisMascotas
-let usuarioActual;
+
 $(document).ready(obtenerUsuario());
 obtenerMascotas(usuarioActual);
 domUsuario(usuarioActual);

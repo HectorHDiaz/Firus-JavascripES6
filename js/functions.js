@@ -1,3 +1,5 @@
+let usuarioActual
+
 function obtenerUsuario(){
     const usersInSesion = sessionStorage.getItem('usuarioActual');
     if(usersInSesion){
