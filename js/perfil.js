@@ -3,6 +3,18 @@
 $(document).ready(obtenerUsuario());
 obtenerMascotas(usuarioActual);
 domUsuario(usuarioActual);
+domPerfil(usuarioActual);
+
+function domPerfil(usuario){
+    let banner = document.getElementById("bannerUsuario");
+    banner.style.backgroundImage= `url(${usuario.headerimage})`;
+    
+    document.getElementById("rangoUsuario").innerHTML = usuario.role;
+    document.getElementById("bioUsuario").innerHTML = usuario.desc;
+    document.getElementById("ubicacionUsuario").innerHTML = usuario.location;
+    document.getElementById("bday").innerHTML = `Fecha de Cumpleaños: ${usuario.bday}`;
+    document.getElementById("joinDate").innerHTML = `Se unió en ${usuario.joinDate}`;
+}
 
 
 //Menu de Actividades

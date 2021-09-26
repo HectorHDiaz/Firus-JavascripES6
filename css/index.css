@@ -287,8 +287,7 @@ ul {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 20vh;
-  width: 15vw;
+  min-height: 30vh;
   margin: 20px 10px;
 }
 

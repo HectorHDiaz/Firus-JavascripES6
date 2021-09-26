@@ -287,8 +287,7 @@ ul {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 20vh;
-  width: 15vw;
+  min-height: 30vh;
   margin: 20px 10px;
 }
 
@@ -357,7 +356,7 @@ ul {
 }
 
 .cuadroUsuario .bannerUsuario {
-  background: url("../media/user/banner.jpg") no-repeat top center;
+  background-image: url("");
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -447,9 +446,10 @@ ul {
 }
 
 .actividadUsuario .menuActividad .actividad {
-  padding: 1em 1em;
+  padding: 0.7em;
   width: 25%;
   color: #bf3d4a;
+  font-size: 0.8em;
   text-align: center;
   border-radius: 10px 10px 0 0;
 }
@@ -514,10 +514,6 @@ ul {
     margin-bottom: 0.5em;
     font-size: 1em;
   }
-  .cuadroUsuario .actividadUsuario .nav .nav-item .nav-link {
-    font-size: 1.5em;
-    color: #bf3d4a;
-  }
 }
 
 @media all and (min-width: 992px) {
@@ -566,9 +562,9 @@ ul {
     margin-bottom: 0.5em;
     font-size: 1em;
   }
-  .cuadroUsuario .actividadUsuario .nav .nav-item .nav-link {
-    font-size: 1em;
-    color: #bf3d4a;
+  .actividadUsuario .menuActividad .actividad {
+    padding: 1em;
+    font-size: 1.2em;
   }
 }
 /*# sourceMappingURL=perfil.css.map */

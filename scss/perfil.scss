@@ -2,7 +2,7 @@
 
 .cuadroUsuario{
     .bannerUsuario{
-        background: url("../media/user/banner.jpg") no-repeat top center;
+        background-image: url("");
         background-size:cover;
         background-position: center;
         width: 100%;
@@ -70,9 +70,10 @@
         flex-direction: row;
         position: relative;
         .actividad{ 
-            padding: 1em 1em;
+            padding: 0.7em;
             width: 25%;
             color: $primario;
+            font-size:0.8em;
             text-align: center;
             border-radius: 10px 10px 0 0;
             &:hover{
@@ -141,16 +142,7 @@
             }
         }
         .actividadUsuario{
-            .nav{
-                
-                .nav-item{
-    
-                    .nav-link{
-                        font-size: 1.5em;
-                        color: $primario;
-                    }
-                }
-            }
+
         }
     }   
 }
@@ -200,19 +192,13 @@
                 font-size: 1em;
             }
         }
-        .actividadUsuario{
-            .nav{
-                
-                .nav-item{
-    
-                    .nav-link{
-                        font-size: 1em;
-                        color: $primario;
-                    }
-                }
+    }
+    .actividadUsuario{
+        .menuActividad{
+            .actividad{ 
+                padding: 1em;
+                font-size:1.2em;
             }
         }
-    }
-    
-    
+    }  
 }

@@ -42,7 +42,7 @@ function domTextUsuario(atributo, atributoUsuario){
 function crearCartas(datosMascotas, ubicacion){
     datosMascotas.forEach(mascota => {
         let card = document.createElement("div");
-        card.innerHTML=`<div class="col">
+        card.innerHTML=`<div class="col mb-4">
                             <div class="card card1" style="background-image:url('${mascota.imagenMascota}')">
                                 <div class="cardHead">
                                     <div class="cardHead__title">
