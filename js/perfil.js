@@ -16,6 +16,11 @@ function domPerfil(usuario){
     document.getElementById("joinDate").innerHTML = `Se unió en ${usuario.joinDate}`;
 }
 
+$("#btnCerrarSesion").click(()=>{
+    sessionStorage.removeItem('usuarioActual');
+    location.href = "../index.html";
+});
+
 
 //Menu de Actividades
 $('.actividad').click(function(e){
