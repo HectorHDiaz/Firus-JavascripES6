@@ -9,21 +9,6 @@ function obtenerUsuario(){
     }
 }
 
-function obtenerMascotas(usuario){
-    let ubicacion = document.getElementById("mascotas"); 
-    fetch("https://my-json-server.typicode.com/HectorHDiaz/JSON-Firus/mascotas")
-    .then(res=>res.json())
-    .then(data=>{ 
-        let datos = []; 
-        data.forEach(mascotas => {
-            if(mascotas.owner == usuario.name){
-                datos.push(mascotas);
-            }
-        })
-        crearCartas(datos, ubicacion);
-    });
-}
-
 function domUsuario(usuario){
     let imagenUsuario = document.getElementsByClassName("userImage");
     for(let i = 0; i < imagenUsuario.length; i++){

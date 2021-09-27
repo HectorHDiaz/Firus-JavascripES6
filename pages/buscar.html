@@ -63,39 +63,37 @@
                 </p>
                 <!--Buscador y Filtros-->
                 <div class="filtrosForm">
-                  <form action="gracias.html" method="POST" enctype="multipart/form-data">
+                  <form id="filtrosForm" action="#resultados" method="POST" enctype="multipart/form-data">
                     <hr class="my-4">
                     <input class="form-control" type="text" name="buscador" id="Buscar" placeholder="Ingresa palabras clave. Ej: Cachorro, Activo, etc">
                     <div class="filtroSelect">
                       <div class="select">
-                        <select class="form-control">
-                          <option>Perro</option>
+                        <select class="form-control" name="select">
+                          <option selected>Perro</option>
                           <option>Gato</option>
-                          <option>Cualquiera</option>
                         </select>
       
-                        <select select class="form-control"> 
-                          <option>Hembra</option>
+                        <select class="form-control" name="select"> 
+                          <option selected>Hembra</option>
                           <option>Macho</option>
-                          <option>Cualquiera</option>
                         </select>
                       </div>
                       <div class="select">
-                        <select select class="form-control">
-                          <option>Pequeño</option>
-                          <option>Mediano</option>
-                          <option>Grande</option>
-                          <option>Enorme</option>
+                        <select class="form-control" name="select">
+                          <option selected>Callejero</option>
+                          <option>Perdido</option>
+                          <option>Adoptado</option>
                         </select>
-                        <select select class="form-control">
+                        <select class="form-control" name="select">
                           <option>Bebe</option>
-                          <option>Cachorro</option>
+                          <option selected>Cachorro</option>
                           <option>Adulto</option>
                           <option>Mayor</option>
                         </select>
                       </div>
                     </div>
-                    <a class="btn" href="#resultados">Buscar!</a>
+                    <button type="submit" id="btnSubmit" class="btn">Buscar</button>
+                    <button type="button" id="btnSubmitTodos" class="btn">Buscar Todos!</button>
                   </form> 
                 </div>
               </div>
