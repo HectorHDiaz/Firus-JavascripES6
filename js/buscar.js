@@ -1,36 +1,38 @@
 //Traer resultados del JSON y mostrar.
-$(document).ready(obtenerUsuario());
-domUsuario(usuarioActual);
+$(document).ready(getUser());
+domUser(activeUser);
 
-let filtrosForm = document.getElementById("filtrosForm");
 
-let btnSubmit = document.getElementById("btnSubmit");
+let formFilters = document.getElementById("filtrosForm");
 
-let dataFiltrada= [];
+let submitBtn = document.getElementById("btnSubmit");
 
 //Tener los datos del Filtro
-filtrosForm.addEventListener('submit',(e)=>{
+formFilters.addEventListener('submit',(e)=>{
     e.preventDefault();
-    let infoForm =[];
+    let formInfo =[];
     for(let i = 0; i <= 4; i++){
-        infoForm.push(e.target[i].value) 
+        formInfo.push(e.target[i].value) 
     }
-    getResultadosFiltro(infoForm);
+    getFiltersUser(formInfo);
 });
 
 //Aplicar filtros en la busqueda
-function getResultadosFiltro(filtros){
+function getFiltersUser(filters){
     fetch("https://my-json-server.typicode.com/HectorHDiaz/JSON-Firus/mascotas")
     .then(res=>res.json())
     .then(data=>{
-        dataFiltrada = data.filter(mascota => mascota.especieMascota    == filtros[1] 
-                                              && mascota.generoMascota  == filtros[2] 
-                                              && mascota.estaPerdido    == filtros[3] 
-                                              && mascota.edadMascota    == filtros[4] );
+        let filteredData;
+        filteredData = data.filter(mascota =>    mascota.especie       == filters[1] 
+                                              && mascota.genero        == filters[2] 
+                                              && mascota.estaPerdido   == filters[3] 
+                                              && mascota.edad          == filters[4]);
         
+        console.log(filteredData)
+
         document.getElementById("resultadosDiv").innerHTML = "";    
         location.href = "#resultadosDiv"
-        crearCartas(dataFiltrada, document.getElementById("resultadosDiv"));
+        createCards(filteredData, document.getElementById("resultadosDiv"));
     })
 }
 
@@ -41,6 +43,6 @@ $("#btnSubmitTodos").click(()=>{
         .then(data=>{
             document.getElementById("resultadosDiv").innerHTML = "";    
             location.href = "#resultadosDiv"
-            crearCartas(data, document.getElementById("resultadosDiv"));
+            createCards(data, document.getElementById("resultadosDiv"));
         })
 })

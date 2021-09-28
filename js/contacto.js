@@ -1,3 +1,3 @@
 //API de MercadoPago
-$(document).ready(obtenerUsuario());
-domUsuario(usuarioActual);
+$(document).ready(getUser());
+domUser(usuarioActual);

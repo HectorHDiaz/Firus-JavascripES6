@@ -1,14 +1,14 @@
 class MascotaPerdida{
 //Properties
-    constructor(id,imagenMascota, especieMascota, generoMascota, edadMascota, descripcionMascota, estaPerdido, nombreMascota, owner){
+    constructor(id,imagen, especie, genero, edad, descripcion, estaPerdido, nombre, owner){
         this.id             = id;
-        this.imagen         = imagenMascota;
-        this.especie        = especieMascota;
-        this.genero         = generoMascota;
-        this.edad           = edadMascota;
-        this.descripcion    = descripcionMascota;
+        this.imagen         = imagen;
+        this.especie        = especie;
+        this.genero         = genero;
+        this.edad           = edad;
+        this.descripcion    = descripcion;
         this.estaPerdido    = estaPerdido;
-        this.nombre         = nombreMascota;
+        this.nombre         = nombre;
         this.owner          = owner;
 
     }

@@ -1,6 +1,6 @@
 
-$(document).ready(obtenerUsuario());
-domUsuario(usuarioActual);
+$(document).ready(getUser());
+domUser(activeUser);
 
 
 // let imagenMascota, especieMascota, generoMascota, edadMascota, descripcionMascota, estaPerdido, nombreMascota;

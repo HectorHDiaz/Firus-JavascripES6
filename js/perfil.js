@@ -1,34 +1,34 @@
 //Carga de MisMascotas
 
-$(document).ready(obtenerUsuario());
-obtenerMascotas(usuarioActual);
-domUsuario(usuarioActual);
-domPerfil(usuarioActual);
+$(document).ready(getUser());
+getMascotas(activeUser);
+domUser(activeUser);
+domProfile(activeUser);
 
-function obtenerMascotas(usuario){
-    let ubicacion = document.getElementById("mascotas"); 
+function getMascotas(user){
+    let location = document.getElementById("mascotas"); 
     fetch("https://my-json-server.typicode.com/HectorHDiaz/JSON-Firus/mascotas")
     .then(res=>res.json())
     .then(data=>{ 
-        let datos = []; 
+        let userMascotas = []; 
         data.forEach(mascotas => {
-            if(mascotas.owner == usuario.name){
-                datos.push(mascotas);
+            if(mascotas.owner == user.name){
+                userMascotas.push(mascotas);
             }
         })
-        crearCartas(datos, ubicacion);
+        createCards(userMascotas, location);
     });
 }
 
-function domPerfil(usuario){
+function domProfile(user){
     let banner = document.getElementById("bannerUsuario");
-    banner.style.backgroundImage= `url(${usuario.headerimage})`;
+    banner.style.backgroundImage= `url(${user.headerimage})`;
     
-    document.getElementById("rangoUsuario").innerHTML = usuario.role;
-    document.getElementById("bioUsuario").innerHTML = usuario.desc;
-    document.getElementById("ubicacionUsuario").innerHTML = usuario.location;
-    document.getElementById("bday").innerHTML = `Fecha de Cumpleaños: ${usuario.bday}`;
-    document.getElementById("joinDate").innerHTML = `Se unió en ${usuario.joinDate}`;
+    document.getElementById("rangoUsuario").innerHTML = user.role;
+    document.getElementById("bioUsuario").innerHTML = user.desc;
+    document.getElementById("ubicacionUsuario").innerHTML = user.location;
+    document.getElementById("bday").innerHTML = `Fecha de Cumpleaños: ${user.bday}`;
+    document.getElementById("joinDate").innerHTML = `Se unió en ${user.joinDate}`;
 }
 
 $("#btnCerrarSesion").click(()=>{
@@ -61,3 +61,4 @@ span.click(()=>{
 modal.click((e) => {
     modal.fadeOut(200);
 })
+  

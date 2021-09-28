@@ -1,34 +1,34 @@
 
-let formIngresar = document.getElementById("sumarForm");
-let usuarios = [];
+let loginForm = document.getElementById("sumarForm");
+let users = [];
+let loggedUser={};
 
-$(document).ready(obtenerUsuarios);
+$(document).ready(getUsers);
 
-formIngresar.addEventListener('submit', ingresoUsuario);
+loginForm.addEventListener('submit', loginUser);
 
 
-
- function ingresoUsuario(e){
-    e.preventDefault();
-    let usuarioIngreso={};
-    usuarios.forEach(usuario =>{
-        if(usuario.user == document.getElementById("nombreUsuario").value){
-            usuarioIngreso = usuario;
-            console.log("Usuario Conseguido")
-        }
-    });
-    if(usuarioIngreso.pass == document.getElementById("passUsuario").value){
-        sessionStorage.setItem('usuarioActual', JSON.stringify(usuarioIngreso));
-        location.href="pages/inicio.html";
-    }else{
-        alert("Ingrese Usuario y Contraseña correcta!");
-    }
-}
-
-function obtenerUsuarios(){
+function getUsers(){
     fetch("https://my-json-server.typicode.com/HectorHDiaz/JSON-Firus/usuarios")
     .then(res=>res.json())
     .then(data=>{  
-        usuarios = data;
+        users = data;
     });
 }
+
+function loginUser(e){
+    e.preventDefault();
+    users.forEach(user =>{
+        if(user.username == document.getElementById("nombreUsuario").value){
+            loggedUser = user;
+            console.log("Usuario Conseguido")
+        }
+    });
+    if(loggedUser.pass == document.getElementById("passUsuario").value){
+        sessionStorage.setItem('usuarioActual', JSON.stringify(loggedUser));
+        location.href="pages/inicio.html";
+    }else{
+        alert("Usuario o Contraseña incorrecta!");
+    }
+}
+

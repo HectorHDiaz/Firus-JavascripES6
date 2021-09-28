@@ -9,14 +9,12 @@ function validarImagen(){
     }
 }
 
-
 function validacionError(){
     let mensajeMasInfo = document.getElementById("buttonP")
     mensajeMasInfo.textContent = "Por favor, ingresar todos los datos."   
     let masInfo = document.getElementById("divButton");
     masInfo.appendChild(mensajeMasInfo);
 }
-
 
 function validarNombre(estaPerdido){
     if(estaPerdido){
@@ -25,7 +23,6 @@ function validarNombre(estaPerdido){
         return "Callejero";
     }
 }
-
 
 function mostrarInputNombre(){
     let input = document.getElementById("nombreSection");
@@ -37,7 +34,6 @@ function mostrarInputNombre(){
         input.style.display = "none";
       }
 }
-
 
 function validacionCheckbox(checkbox){
     if(checkbox.checked == true){
