@@ -1,26 +1,54 @@
 @import "main";
 
 .containerLogin{
+    height: 100%;
     background-color:$fondo;
     background-image: url("../media/gatonegromano.jpg");
     background-size: cover;
     background-position: center;
-    padding: 10vh 10vw; 
+    padding: 5% 0 20% 0; 
     text-shadow: 2px 0 0 $fondo, -2px 0 0 $fondo, 0 2px 0 $fondo, 0 -2px 0 $fondo, 1px 1px $fondo, -1px -1px 0 $fondo, 1px -1px 0 $fondo, -1px 1px 0 $fondo;
 }
 
-.cuadroLogin{
-    width: 100%;
+.loginContainer{
+    display: none;
+    &.active{
+        display: block;
+    }
+}
+.registerContainer{
+    display: none;
+    &.active{
+        display: block;
+    }
+}
+.show{
+    display: block;
+}
+.hidden{
+    display: none;
+}
+
+.cuadroIndex{
+    width: 40%;
+    margin: auto;
     display: flex;
     flex-direction: column;
-    padding: 2em;
+    padding: 1em;
     font-family: $fuente;
-    background-color:rgba(255, 255, 255, 0.5);
+    background-color:rgba(255, 255, 255, 0.38);
     justify-content: space-between;
     box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.1);
 
+    .cuadroLogos{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
     .form-group{
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
+        
     }
 
     h3{
@@ -35,7 +63,7 @@
 
     label{
         font-weight: 300;
-        font-size: 1.2em;
+        font-size: 1em;
     }
 
     input.form-control{
@@ -52,9 +80,8 @@
     
 }
 @media all and (min-width: 540px) {
-    .cuadroLogin{
+    .cuadroIndex{
         padding: 2.5em;
-        margin: auto;
         max-width: 800px;
         h3{
             font-weight: 400;
@@ -79,24 +106,22 @@
 @media all and (min-width: 992px) {
     .containerLogin{
         background-color:$fondo;
-        background-image: url("../media/manopata.jpg");
-        background-size: cover;
+        background-image: url("../media/info1.png");
+        background-size:cover;
         background-position: center;
-        padding: 17vh 10vw;
     }
-    .cuadroLogin{
+    .cuadroIndex{
         padding: 2.5em;
-        margin: auto;
         max-width: 800px;
         h3{
             font-weight: 500;
-            font-size: 2.3rem;
+            font-size: 2rem;
             margin-bottom: 1.5rem;
             padding: 1rem;
         }
         label{
             font-weight: 400;
-            font-size: 1.4em;
+            font-size: 1em;
         }
         .form-group--btn{
             display: flex;

@@ -7,3 +7,8 @@ $fuente: 'Montserrat', sans-serif;
 $fuente-light: 300;
 $fuente-regular: 400;
 $fuente-bold: 700;
+
+a {
+    text-decoration: none;
+    color: inherit;
+  }

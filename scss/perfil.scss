@@ -1,4 +1,22 @@
 @import "main";
+.form-control{
+    margin: 1em auto;
+}
+.container{
+    padding-top: 0;
+}
+
+#btnCerrarSesion{
+    font-size: 0.7em;
+}
+
+#bioUsuario, #ubicacionUsuario, #bday{
+    &:hover{
+        cursor: pointer;
+        text-decoration: underline;
+        color: $primario;
+    }
+}
 
 .cuadroUsuario{
     .bannerUsuario{
@@ -8,6 +26,17 @@
         width: 100%;
         height: 170px;
         position: relative;
+        z-index: 0;
+        .changeBannerButton{
+            cursor: pointer;
+            img{
+                width:50px;
+                &:hover {
+                    transition: 0.5s;
+                    transform: scale(1.2);
+                  }
+            }
+        }
         .imagenUsuario{
             display:block;
             position: absolute;
@@ -15,11 +44,16 @@
             width: 100px;
             height: 100px;
             border-radius: 9999px;
-            border-width: 1px;
+            border: 5px solid #fafafa;
             bottom:-40px;
             left: 15px;
+            cursor: pointer;
             img{
                 width: 100%;
+                z-index: 1;
+            }
+            &:hover{
+                filter: brightness(120%);
             }
         }
     }
@@ -53,6 +87,7 @@
     }
     .datosUsuario{
         padding: 1em;
+        padding-bottom: 0;
         h5{
             font-size:0.7em ;
         }
@@ -99,7 +134,9 @@
 }
 
 @media all and (min-width:576px) {
-
+    #btnCerrarSesion{
+        font-size: 1em;
+    }
     .cuadroUsuario{
         .bannerUsuario{
             width: 100%;
@@ -140,9 +177,6 @@
                 margin-bottom: 0.5em;
                 font-size: 1em;
             }
-        }
-        .actividadUsuario{
-
         }
     }   
 }

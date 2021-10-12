@@ -1,32 +1,72 @@
 .header {
+  button{
+    margin:0 !important
+  }
   font-family: $fuente;
   background-color: $primario;
-  .navbar-user{
+  .navbar-user {
     display: flex;
     flex-direction: row;
     align-items: center;
-    .navbar-userImage{
+    .navbar-userImage {
       width: 50px;
-      height:50px;
+      height: 50px;
       border-radius: 9999px;
       border-width: 1px;
       overflow: hidden;
-      img{
+      img {
         width: 100%;
       }
     }
-    p.nombreUsuario{
-      text-decoration: none;
-      color: $fondo;
-      margin: 0;
-      padding: 0 1em;
+    p.nombreUsuario {
+      display: none;
     }
   }
-  .navbar-brand img {
-    width: 120px;
-    &:hover {
-      transition: 1s;
-      transform: rotate(1turn);
+  .navbar-brand {
+    margin: 0;
+    img {
+      width: 80px;
+      &:hover {
+        transition: 1s;
+        transform: rotate(1turn);
+      }
+    }
+  }
+}
+.navbar-navv {
+  display: flex;
+  padding-left: 0;
+  margin: 1em 0;
+  list-style: none;
+  color: $fondo;
+  justify-content: space-around;
+  .nav-item {
+    color: rgba(255, 255, 255, 0.5);
+    &.active {
+      color: white;
+    }
+    :hover {
+      color: rgba(255, 255, 255, 0.8);
+    }
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .header {
+    .navbar-user {
+      p.nombreUsuario {
+        display: flex;
+        text-decoration: none;
+        color: $fondo;
+        margin: 0;
+        padding: 0 1em;
+      }
+    }
+    .navbar-brand {
+      margin-right: 50px;
+      img {
+        width: 150px;
+      }
     }
   }
 }

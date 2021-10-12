@@ -1,7 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .header {
   font-family: "Montserrat", sans-serif;
   background-color: #bf3d4a;
+}
+
+.header button {
+  margin: 0 !important;
 }
 
 .header .navbar-user {
@@ -30,14 +39,15 @@
 }
 
 .header .navbar-user p.nombreUsuario {
-  text-decoration: none;
-  color: #fafafa;
+  display: none;
+}
+
+.header .navbar-brand {
   margin: 0;
-  padding: 0 1em;
 }
 
 .header .navbar-brand img {
-  width: 120px;
+  width: 80px;
 }
 
 .header .navbar-brand img:hover {
@@ -45,6 +55,48 @@
   transition: 1s;
   -webkit-transform: rotate(1turn);
           transform: rotate(1turn);
+}
+
+.navbar-navv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 0;
+  margin: 1em 0;
+  list-style: none;
+  color: #fafafa;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.navbar-navv .nav-item {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar-navv .nav-item.active {
+  color: white;
+}
+
+.navbar-navv .nav-item :hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+@media screen and (min-width: 500px) {
+  .header .navbar-user p.nombreUsuario {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-decoration: none;
+    color: #fafafa;
+    margin: 0;
+    padding: 0 1em;
+  }
+  .header .navbar-brand {
+    margin-right: 50px;
+  }
+  .header .navbar-brand img {
+    width: 150px;
+  }
 }
 
 html {
@@ -212,47 +264,121 @@ ul {
 
 .modal {
   display: none;
-  /* Hidden by default */
   position: fixed;
   /* Stay in place */
   z-index: 1;
-  /* Sit on top */
   left: 0;
   top: 0;
   width: 100%;
-  /* Full width */
   height: 100%;
-  /* Full height */
   background-color: black;
-  /* Fallback color */
   background-color: rgba(0, 0, 0, 0.4);
-  /* Black w/ opacity */
 }
 
 /* Modal Content/Box */
 .modal-content {
   background-color: #fefefe;
-  margin: 15% auto;
-  /* 15% from the top and centered */
-  padding: 20px;
+  margin: 5% auto;
+  padding: 1em;
   border: 1px solid #888;
-  width: 30%;
+  width: 70%;
   /* Could be more or less, depending on screen size */
 }
 
-/* The Close Button */
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+.modalMascota {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
+.modalMascota .mascotaImg {
+  height: 250px;
+  background-position: center;
+  background-size: cover;
+  border-radius: 0.2rem;
+}
+
+.modalMascota .mascotaInfo {
+  height: 30%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 1em;
+}
+
+.modalMascota .mascotaInfo .infoTitle {
+  font-size: 1.5em;
+  color: #bf3d4a;
+  margin: 0;
+}
+
+.modalMascota .mascotaInfo .info {
+  padding: 0.2em;
+  font-size: 0.8em;
+}
+
+.modalMascota .mascotaInfo .info > p {
+  display: inline;
+}
+
+.modalMascota .btn {
+  width: 50%;
+  margin: 1em 25%;
+  margin-bottom: 0;
+}
+
+@media all and (min-width: 750px) {
+  .modal-content {
+    margin: 5% auto;
+    padding: 1em;
+    width: 70%;
+    /* Could be more or less, depending on screen size */
+  }
+  .modalMascota {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .modalMascota .mascotaImg {
+    height: auto;
+    width: 50%;
+    background-position: center;
+    background-size: cover;
+    border-radius: 0.2rem;
+  }
+  .modalMascota .mascotaInfo {
+    width: 50%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0 1em 1em 1em;
+  }
+  .modalMascota .mascotaInfo .infoTitle {
+    font-size: 2em;
+    color: #bf3d4a;
+    margin: 0;
+  }
+  .modalMascota .mascotaInfo .info {
+    padding: 0.5em;
+  }
+  .modalMascota .mascotaInfo .info > p {
+    display: inline;
+  }
+  .modalMascota .btn {
+    width: 50%;
+    margin: 1em 25%;
+    margin-bottom: 0;
+  }
 }
 
 /*Button*/
@@ -322,6 +448,21 @@ ul {
   font-size: 100%;
 }
 
+.badge-Adoptado {
+  color: #fafafa;
+  background-color: #007bff;
+}
+
+.badge-Adopcion {
+  color: #fafafa;
+  background-color: #28a745;
+}
+
+.badge-Perdido {
+  color: #242424;
+  background-color: #ffc107;
+}
+
 .cuadroPrincipal {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -350,6 +491,10 @@ ul {
   outline: 0;
   -webkit-box-shadow: 0 0 0 0.2rem #ff808050;
           box-shadow: 0 0 0 0.2rem #ff808050;
+}
+
+.wd-50 {
+  width: 49%;
 }
 
 .cuadroInforme {

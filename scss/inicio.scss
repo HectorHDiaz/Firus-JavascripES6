@@ -8,15 +8,6 @@
   lila:   #EEE8F0
 */
 
-a {
-  text-decoration: none;
-  color: inherit;
-  &:hover {
-    text-decoration: none;
-    color: $primario;
-  }
-}
-
 /*Carousel*/
 .carousel-caption {
   padding-bottom: 0;

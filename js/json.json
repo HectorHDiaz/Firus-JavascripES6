@@ -1,0 +1,194 @@
+
+{
+    "usuarios":[
+                {
+                  "id":"0",
+                  "name": "Hector Diaz",
+                  "username": "Atonomo.4s",
+                  "pass": "1234",
+                  "email": "atonomo.4s@gmail.com",
+                  "imageURL": "https://i.imgur.com/B2n1WHV.jpg",
+                  "headerImage": "https://i.imgur.com/a0jpl1D.jpg",
+                  "desc": "Respetuoso, sincero y empático. Sueño crear la plataforma capaz de unir a las personas involucradas en los animales necesitados de ayuda y amor.",
+                  "location": "San Fernando, Buenos Aires",
+                  "bday": "9 de Abril",
+                  "role": "Administrador",
+                  "joinDate": "Marzo 2017"
+                },
+                {
+                  "id":"1",
+                  "name": "Tomas Diaz",
+                  "username": "Tomy.8k",
+                  "pass": "4321",
+                  "email": "tomy.diaz.8k@gmail.com",
+                  "imageURL": "https://i.imgur.com/E68DCNE.jpg",
+                  "headerImage": "https://i.imgur.com/FFr0lNB.jpg",
+                  "desc": "Soy un capo de la vida y el Diseño Gráfico, obvio que me importan muucho los animales en necesidad. Goomy",
+                  "location": "Saitama, Japón",
+                  "bday": "2 de Marzo",
+                  "role": "Moderador",
+                  "joinDate": "Octubre 2018"
+                },
+                {
+                  "id":"2",
+                  "name": "Sara Herrera",
+                  "username": "Herrera.Sara",
+                  "pass": "0000",
+                  "email": "herrera.sara.n@gmail.com",
+                  "imageURL":"https://i.imgur.com/CjYtfWw.jpg",
+                  "headerimage":"https://i.imgur.com/KyKq0Op.jpg",
+                  "desc":"Casada y Madre de 4 hijos y 4 gatos. A lo largo de los años tuve mas de 50 s.",
+                  "location":"San Fernando, Buenos Aires",
+                  "bday":"31 de Octubre",
+                  "role":"Asistente",
+                  "joinDate":"Diciembre 2018"
+                }
+          ],
+    "mascotas": [
+  
+                {
+                    "id"         : 0,
+                    "imagen"     : "https://i.imgur.com/e1vzT4a.jpeg",
+                    "especie"    : "Perro",
+                    "genero"     : "Macho",
+                    "edad"       : "Mayor",
+                    "descripcion": "Nuestro primer perro rescatado de la calle. Tierno y tonton, pero muy leal y cariñoso",
+                    "estado"     : "Perdido",
+                    "nombre"     : "Patita",
+                    "owner"      : 0
+                },
+                {
+                    "id"         : 1,
+                    "imagen"     : "https://i.imgur.com/6LZx8Hk.jpeg",
+                    "especie"    : "Gato",
+                    "genero"     : "Hembra",
+                    "edad"       : "Mayor",
+                    "descripcion": "La primera gata de la casa y fué la mejor! Es de River",
+                    "estado"     : "Perdido",
+                    "nombre"     : "Minina",
+                    "owner"      : 2
+                },
+                {
+                    "id"         : 2,
+                    "imagen"     : "https://i.imgur.com/bTt1zyT.jpeg",
+                    "especie"    : "Gato",
+                    "genero"     : "Macho",
+                    "edad"       : "Mayor",
+                    "descripcion": "Se perdió un día. Esperemos que siga bien. Es muy cariñoso e inteligente",
+                    "estado"     : "Perdido",
+                    "nombre"     : "Matute",
+                    "owner"      : 0
+                },
+                {
+                    "id"         : 3,
+                    "imagen"     : "https://i.imgur.com/1YxIPfo.jpeg",
+                    "especie"    : "Gato",
+                    "genero"     : "Hembra",
+                    "edad"       : "Mayor",
+                    "descripcion": "Ella sigue siendo fuerte, cariñosa y fiel. Maulla y sabe pedir la comida",
+                    "estado"     : "Adoptado",
+                    "nombre"     : "Monina",
+                    "owner"      : 0
+                },
+                {
+                    "id"         : 4,
+                    "imagen"     : "https://i.imgur.com/iEGNmVy.jpeg",
+                    "especie"    : "Gato",
+                    "genero"     : "Macho",
+                    "edad"       : "Adulto",
+                    "descripcion": "Gato Alfa, Obero, cabulero para pedir comida y mea todo lo que encuentra. Es igual a Nacho Scocco",
+                    "estado"     : "Adoptado",
+                    "nombre"     : "Loki",
+                    "owner"      : 0
+                },
+                {
+                      "id"         : 5,
+                      "imagen"     : "https://i.imgur.com/fsOjPOD.jpeg",
+                      "especie"    : "Gato",
+                      "genero"     : "Macho",
+                      "edad"       : "Cachorro",
+                      "descripcion": "Miedoso y timido. Adoptado de la calle, se cuida mucho pero es muy cariñoso. Tiene otra casa también.",
+                      "estado"     : "Adoptado",
+                      "nombre"     : "Simba",
+                      "owner"      : 1
+                 },
+                 {
+                      "id"         : 6,
+                      "imagen"     : "https://i.imgur.com/jeRgAdE.jpeg",
+                      "especie"    : "Gato",
+                      "genero"     : "Macho",
+                      "edad"       : "Cachorro",
+                      "descripcion": "Gato negro, gordo, tonto y feo. Nah, mentira. Es orgulloso por ser el único que entra a la casa. Es de Boca",
+                      "estado"     : "Adoptado",
+                      "nombre"     : "Tchaikovsky",
+                      "owner"      : 1
+                 },
+                 {
+                      "id"         : 7,
+                      "imagen"     : "https://i.imgur.com/RieFQTV.jpeg",
+                      "especie"    : "Perro",
+                      "genero"     : "Macho",
+                      "edad"       : "Cachorro",
+                      "descripcion": "Del espacio le llegó algo muy especial, y lo atrapó y todos sus secretos el sabrá. Con superpoderes el ahora es BEN10",
+                      "estado"     : "Adopcion",
+                      "nombre"     : "Ben10",
+                      "owner"      : 1
+                 },
+                 {
+                      "id"         : 12,
+                      "imagen"     : "https://i.imgur.com/zrLNzMF.jpeg",
+                      "especie"    : "Perro",
+                      "genero"     : "Macho",
+                      "edad"       : "Cachorro",
+                      "descripcion": "GROGUUU",
+                      "estado"     : "Adoptado",
+                      "nombre"     : "Grogu",
+                      "owner"      : 2
+                 },
+                 {
+                      "id"         : 13,
+                      "imagen"     : "https://i.imgur.com/dfb1f2z.jpeg",
+                      "especie"    : "Perro",
+                      "genero"     : "Hembra",
+                      "edad"       : "Mayor",
+                      "descripcion": "Mili",
+                      "estado"     : "Adopcion",
+                      "nombre"     : "Mili",
+                      "owner"      : 2
+                 },
+                 {
+                      "id"         : 14,
+                      "imagen"     : "https://i.imgur.com/A0vbbnV.jpeg",
+                      "especie"    : "Perro",
+                      "genero"     : "Macho",
+                      "edad"       : "Adulto",
+                      "descripcion": "Ponchi",
+                      "estado"     : "Adopcion",
+                      "nombre"     : "Ponchi",
+                      "owner"      : 1
+                 },
+                     {
+                      "id"         : 15,
+                      "imagen"     : "https://i.imgur.com/au0BJek.jpeg",
+                      "especie"    : "Perro",
+                      "genero"     : "Hembra",
+                      "edad"       : "Mayor",
+                      "descripcion": "Violetita",
+                      "estado"     : "Adopcion",
+                      "nombre"     : "Violeta",
+                      "owner"      : 2
+                 },
+                 {
+                      "id"         : 16,
+                      "imagen"     : "https://i.imgur.com/YVWuzPj.jpeg",
+                      "especie"    : "Perro",
+                      "genero"     : "Hembra",
+                      "edad"       : "Mayor",
+                      "descripcion": "Wendy",
+                      "estado"     : "Adopcion",
+                      "nombre"     : "Wendy",
+                      "owner"      : 1
+                 }
+          ]
+  }
+  
