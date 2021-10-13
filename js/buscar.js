@@ -1,5 +1,3 @@
-//MMMMMMMMEEEEEEEEEEEEJJJJJJJOOOOOORRRRRRAAAAAAAAAAARRRRRRRRR
-
 //Traer resultados.
 $(document).ready(getUser());
 $(document).ready(getAllMascotas());
@@ -7,32 +5,30 @@ $(document).ready(getAllUsers());
 domUser(activeUser);
 
 let formFilters = document.getElementById("filtrosForm");
-let submitBtn = document.getElementById("btnSubmit");
+let getAllButton = document.getElementById("btnSubmitTodos");
 
-//Obtener datos del Formulario y Ejecutar función
-formFilters.addEventListener('submit',(e)=>{
-    e.preventDefault();
-    let formInfo =[];
-    for(let i = 0; i <= 4; i++){
-        formInfo.push(e.target[i].value) 
-    }
-    getFiltersUser(formInfo);
-});
+//Ejecución de función
+formFilters.addEventListener('submit', getfilteredResults)
+
 //Aplicar filtros en la busqueda
-function getFiltersUser(filters){
+function getfilteredResults(e){
+    e.preventDefault();
     let filteredData;
-    filteredData = allMascotas.filter(mascota =>   mascota.especie       == filters[1] 
-                                                && mascota.genero        == filters[2] 
-                                                && mascota.estado        == filters[3] 
-                                                && mascota.edad          == filters[4]
+    filteredData = allMascotas.filter(mascota =>   mascota.especie == formFilters.especie.value 
+                                                && mascota.genero  == formFilters.genero.value 
+                                                && mascota.estado  == formFilters.estado.value 
+                                                && mascota.edad    == formFilters.edad.value
     );
     document.getElementById("resultadosDiv").innerHTML = "";    
     location.href = "#resultadosDiv"
     createCards(filteredData, document.getElementById("resultadosDiv"));
 }
+
 //Buscar Todos
-$("#btnSubmitTodos").click(()=>{
+getAllButton.addEventListener('click', getAllResults);
+
+function getAllResults(){
     document.getElementById("resultadosDiv").innerHTML = "";    
     location.href = "#resultadosDiv"
     createCards(allMascotas, document.getElementById("resultadosDiv"));
-})
+}

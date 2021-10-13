@@ -72,9 +72,9 @@ function createCards(dataMascotas, location){
 function cardModal(e){
     allMascotas.forEach(()=>{
         let contenido = 
-            `<div class="modalMascota">
+            `<div id="${e.target.id}" class="modalMascota">
                 <div class="mascotaImg" style="background-image: url(${allMascotas[e.target.id].imagen});"></div>
-                    <div class="mascotaInfo">
+                    <div id="mascotaInfo" class="mascotaInfo">
                         <p class="infoTitle">${allMascotas[e.target.id].nombre}</p>
                         <div class="info">
                             <p>Dueño:</p>
@@ -96,7 +96,7 @@ function cardModal(e){
                             <p>Descripción:</p>
                             <p>${allMascotas[e.target.id].descripcion}</p>
                         </div>
-                        <button id="adoptarBtn" class="btn">${getModalBtn(allMascotas[e.target.id].estado)}</button>
+                        <button onclick="setMessageButton(${e.target.id})" id="adoptarBtn" class="btn">${getModalBtn(allMascotas[e.target.id].estado)}</button>
                     </div>    
                 </div>
             </div>`;            
@@ -114,14 +114,17 @@ function getModalBtn(estado){
             return "Adoptar";
     }
 }
-function showModal(content){
+function showModal(content, user){
     let myModal = document.getElementById("myModal");
     let modalLocation = document.getElementById("modal-content");
     let modalElement = document.createElement("div");
     //Carga del contenido al Modal
     modalLocation.innerHTML="";
     modalElement.innerHTML = content;
-
+    //Distinto tamaño para los cambios de imagenes en el Perfil 
+    if(user == "user"){
+        modalLocation.style.width = "20%";
+    }
     modalLocation.appendChild(modalElement);
     myModal.style.display = "block";
     //Validación de Click fuera del Modal para cerrarlo
@@ -130,6 +133,48 @@ function showModal(content){
           myModal.style.display = "none";
         }
       }
+}
+//Funcion Adoptar
+function setMessageButton(id){
+    let message;
+    switch(allMascotas[id].estado){
+        case "Adoptado":
+            if(allMascotas[id].owner != activeUser.id){
+                message = "<p class='message'>Se enviaron las felicitaciones al dueño!(No se enviaron)</p>"
+                setMessage(message)
+            }else{
+                message = "<p class='message'>Felicitaciones! Tu mascota es popular.</p>"
+                setMessage(message)
+            }
+            break;
+        case "Perdido":
+            message = "<p class='message'>Se enviará la notificación al dueño para que te contacte.</p>"
+            setMessage(message)
+            break;
+        case "Adopcion":
+            if(allMascotas[id].nombre == "Callejero"){
+                message = "<input id='nuevoNombre' type='text' placeholder='Ingrese nuevo Nombre'></input>"
+                setMessage(message)
+            }
+            allMascotas[id].estado = "Adoptado";
+            allMascotas[id].owner = activeUser.id;
+            sessionStorage.removeItem('allMascotas');
+            sessionStorage.setItem('allMascotas', JSON.stringify(allMascotas));
+            
+            message = "<p class='message'>La mascota ya es tuya! Ya puedes verlo en tu Perfil.(Esto si posta)</p>"
+            setMessage(message)
+            break;
+    }
+}
+function setMessage(message){
+    let modalLocation = document.getElementById("mascotaInfo");
+    let modalElement = document.createElement("div");
+    let modalButton = document.getElementById("adoptarBtn");
+    //Carga del contenido al Modal
+
+    modalElement.innerHTML = message;
+    modalButton.style.display = "none";
+    modalLocation.appendChild(modalElement);
 }
 
 //Validaciones de Informe.html
@@ -173,10 +218,14 @@ function validacionTexto(textoValidar){
 }
 //Validador URLs de Imagenes
 function imageExists(image_url){
+
     var http = new XMLHttpRequest();
+
     http.open('HEAD', image_url, false);
     http.send();
+
     return http.status != 404;
+
 }
 
 

@@ -332,6 +332,12 @@ ul {
   margin-bottom: 0;
 }
 
+.message {
+  color: #bf3d4a;
+  margin-top: 1em;
+  margin-bottom: 0;
+}
+
 @media all and (min-width: 750px) {
   .modal-content {
     margin: 5% auto;

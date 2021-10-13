@@ -51,12 +51,14 @@ function menuActividades(e){
 //Eventos y función para cambio de Imagenes de Perfil y Header
 imageProfile.addEventListener('click',()=>{changeImageModal("imageURL")});
 changeBanner.addEventListener('click',()=>{changeImageModal("headerImage")});
+
 function changeImageModal(prop){
+
     let contenido = `<img width="100%" id="formImg" src=${activeUser[prop]}></img>
                       <input type="text" class="form-control" id="newImageUrl" placeholder="Ingrese URL de su Imagen">
                       <button id="imageVerify" class="btn wd-50">Verificar </button>
                       <button id="imageSet" class="btn wd-50">Aceptar</button>`
-    showModal(contenido);   
+    showModal(contenido,"user");   
     
     let verify = document.getElementById("imageVerify");
     let imageSet = document.getElementById("imageSet");

@@ -332,6 +332,12 @@ ul {
   margin-bottom: 0;
 }
 
+.message {
+  color: #bf3d4a;
+  margin-top: 1em;
+  margin-bottom: 0;
+}
+
 @media all and (min-width: 750px) {
   .modal-content {
     margin: 5% auto;
@@ -503,7 +509,7 @@ ul {
   background-image: url("../media/gatonegromano.jpg");
   background-size: cover;
   background-position: center;
-  padding: 5% 0 20% 0;
+  padding: 10% 0 20% 0;
   text-shadow: 2px 0 0 #fafafa, -2px 0 0 #fafafa, 0 2px 0 #fafafa, 0 -2px 0 #fafafa, 1px 1px #fafafa, -1px -1px 0 #fafafa, 1px -1px 0 #fafafa, -1px 1px 0 #fafafa;
 }
 
@@ -532,7 +538,7 @@ ul {
 }
 
 .cuadroIndex {
-  width: 40%;
+  width: 70%;
   margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -562,10 +568,12 @@ ul {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  text-align: center;
+  margin-bottom: 1em;
 }
 
-.cuadroIndex .form-group {
-  margin-bottom: 1rem;
+.cuadroIndex img {
+  width: 120px;
 }
 
 .cuadroIndex h3 {
@@ -576,8 +584,8 @@ ul {
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
   color: #bf3d4a;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+  font-size: 1rem;
+  margin-top: 1em;
 }
 
 .cuadroIndex label {
@@ -587,6 +595,7 @@ ul {
 
 .cuadroIndex input.form-control {
   display: inline;
+  padding: 0.8em;
 }
 
 .cuadroIndex .form-group--btn {
@@ -601,7 +610,7 @@ ul {
 
 .cuadroIndex .form-group--btn .btn {
   margin: 1em auto;
-  width: 100%;
+  width: 70%;
 }
 
 @media all and (min-width: 540px) {
@@ -609,10 +618,27 @@ ul {
     padding: 2.5em;
     max-width: 800px;
   }
+  .cuadroIndex .cuadroLogos {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    text-align: center;
+    margin-bottom: 1em;
+  }
+  .cuadroIndex .cuadroLogos img {
+    width: 150px;
+  }
   .cuadroIndex h3 {
     font-weight: 400;
     font-size: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin-top: 0;
   }
   .cuadroIndex label {
     font-weight: 300;
@@ -641,6 +667,7 @@ ul {
     background-position: center;
   }
   .cuadroIndex {
+    width: 40%;
     padding: 2.5em;
     max-width: 800px;
   }
