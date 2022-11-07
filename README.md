@@ -29,4 +29,4 @@ Herrera.Sara
 >https://my-json-server.typicode.com/HectorHDiaz/JSON-Firus
 
 ## Live demo:
->https://firusdonation.herokuapp.com/
+>https://hectorhdiaz.github.io/Firus-JavascripES6/
